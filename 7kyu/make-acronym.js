@@ -1,4 +1,3 @@
-
 // Write function which takes a string and make an acronym of it.
 
 // Rule of making acronym in this kata:
@@ -11,18 +10,11 @@
 
 // Code wars -> C, w -> C W -> CW
 
+//My solution 
 
-
-//My solution
-
-function toAcronym(str){
-    //split the string into smaller strings 
-    let split = str.split(' ');
-    //set variable to call when needed 
-    //taking the map method to bring the first letter and uppercasing it followed by joining them
-    let final = split.map( w => w[0].toUpperCase()).join('')
-    
-    return final
-    
-    
-  }
+const toAcronym = inp => 
+  //split the string
+  //push it to a new array
+  //uppercase it
+  //join it
+  inp.split(' ').map( x => x[0].toUpperCase()).join('')
