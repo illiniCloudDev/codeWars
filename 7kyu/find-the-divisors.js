@@ -7,3 +7,31 @@
 // divisors(13) --> "13 is prime"
 
 // solution 
+function divisors(integer) {
+  //PARAMATERS
+  //RETURNS
+  //EXAMPLES
+  //PSEUDO CODE 
+  
+  //we need to run a loop to bring all numbers
+  //use filter method to remove the integer and 1
+  //run a conditional on the result array to determine the prime first 
+  //other code will be in else 
+
+  
+  let result = [];
+  
+  for(let i = 0; i <= integer; i++){
+    if( integer % i === 0){
+      result.push(i)
+    }
+  }
+  let arrayWithoutOne = result.filter( number => !(number === 1 || number === integer) ? true : false )
+  
+  if(arrayWithoutOne.length === 0){
+    return `${integer} is prime`;
+  }else{
+    return arrayWithoutOne
+  }
+  
+}
