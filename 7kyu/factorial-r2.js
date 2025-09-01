@@ -7,3 +7,23 @@
 
 //solution 
 
+function factorial(n){
+  //Parameters is a number 
+  //Return the product or error
+  //Examples n = 5 -> 5*4*3*2*1
+  //Pseudo code
+  
+  
+  //run a loop that counts the number from top to bottom
+  //use .reduce?
+  //turn the number into an array of numbers? 
+  if( n  < 0 || n > 12) throw new RangeError("Range must be between 0 and 12")
+  
+  let result = 1;
+  
+  for(let i =1; i <= n ; i++){
+      result *= i 
+    }
+  return result 
+  
+}
