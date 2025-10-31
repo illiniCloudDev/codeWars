@@ -21,20 +21,22 @@ function solution(str, str2){
   //we need to compare the first arg to the second 
   //but only for the ending of the first arg
   //check for conditionals if str matches str2
-  
-  const copyOfStr = str.slice(1, str.length)
-  //const containsResult = copyOfStr.contains(`{str2}`)
-  console.log(copyOfStr)
-  console.log(str)
-  console.log(str2)
-  if(str == str2){
-    return true
-  }else{
-    if(containsResult){
-      return true
-    }else{
-      return false
-    }
-  };
-  
+  //solution is great for most cases, but it does not meet all
+//   const copyOfStr = str.slice(1, str.length)
+//   const containsResult = copyOfStr.includes(str2)
+
+//   if(str == str2){
+//     return true
+//   }else{
+//     if(containsResult){
+//       return true
+//     }else{
+//       return false
+//     }
+//   };
+
+    //simple solution
+    return str.endsWith(str2)
+
+
 }
