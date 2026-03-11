@@ -72,18 +72,27 @@ function jumbler(indices) {
   //we start with zero index
   //make a conditional to return if the first number inside index 0 is 0 
   //inside the for loop we need to constantly change the array
+  // will use unshift() method 
+  //we look at the first index 
+  //pull the value from index[0]
+  //index[0] is now that value
+  //we do the same thing and pull the value
+  //search the index with that value
+  //push it to the front
   
+ 
   let i = 0;
-  let counter = 0; 
+  let counter = 0;
+
   
-  while( indices[i] !== 0){
-    if(indices[i] == 0){
-      return indices[i]
-    }else{
-      counter += 1
-    }
-    i++; 
+  while( indices[0] !== 0){
+    let searchIndex = indices[0]; 
+    let newValue = indices[searchIndex];
+    
+    indices.splice(searchIndex, 1)
+    indices.unshift(newValue)
+
+    counter += 1;
   }
   return counter
-  
 }
