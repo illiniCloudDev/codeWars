@@ -73,17 +73,17 @@ function jumbler(indices) {
   //make a conditional to return if the first number inside index 0 is 0 
   //inside the for loop we need to constantly change the array
   
-  console.log(indices)
+  let i = 0;
+  let counter = 0; 
   
-  if(indices.length == 1){
-    return indices
-  }else{
-    
-    for(let i = 0; i < indices.length; i++){
-      indices.push
+  while( indices[i] !== 0){
+    if(indices[i] == 0){
+      return indices[i]
+    }else{
+      counter += 1
     }
-    
+    i++; 
   }
-
+  return counter
   
 }
