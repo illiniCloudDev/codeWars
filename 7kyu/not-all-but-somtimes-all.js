@@ -22,17 +22,24 @@ function remove(str, what) {
   //splice method to remove the specific letter
   //split() metho don str to make it into an array
   
-  const objArr = Object.keys(what);
   let strArr = str.split('');
-  let result = str.split('');
 
-  for(let i =0; i <= strArr.length; i++){
-    let searchChar = objArr[i]
+  //for in loop to loop through the object 
+  for(let char in what){
+
+    //gets the value/number of times from the key/char
+    let timesToRemove = what[char];
     
-      if(strArr.includes(searchChar)){
-        result.splice(searchChar)        
-      }
+    for(let i = 0; i < timesToRemove; i++){
+        let index = strArr.indexOf(char);
+        
+        if(index !== -1){
+          strArr.splice(index, 1);
+        }else{
+            break;
+        }
+    }
   }
-  return result.join('')
+  return strArr.join('')
   
 }
